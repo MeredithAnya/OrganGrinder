@@ -14,7 +14,7 @@
  *= require_self
  */
 
-ul {
+.keyboard {
   list-style: none;
   position: relative;
   height: 210px;
@@ -53,4 +53,29 @@ ul {
   border-left: none;
   border-right: none;
   border-bottom: none;
+}
+
+.record {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  color: white;
+
+}
+
+.stop {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+
 }

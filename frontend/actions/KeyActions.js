@@ -14,6 +14,12 @@ var KeyActions = {
       actionType: NOTE_RELEASED,
       noteName: noteName
     });
+  },
+  setAllKeys: function(notes){
+    AppDispatcher.dispatch({
+      actionType: "SET_ALL_KEYS",
+      notes: notes
+    });
   }
 };
 

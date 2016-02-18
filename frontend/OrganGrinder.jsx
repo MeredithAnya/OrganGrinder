@@ -6,6 +6,7 @@ var KeyListener = require('./util/KeyListener');
 var KeyStore = require('./stores/KeyStore');
 var Key = require('./components/Key');
 var TONES = require('./constants/Tones');
+var Recorder = require('./components/Recorder');
 new KeyListener();
 
 window.Dispatcher = Dispatcher;
@@ -21,12 +22,16 @@ var Organ = React.createClass({
       return <li key={index}><Key noteName={keyName} /></li>;
     });
     return (
-      <ul>{keyComponents}</ul>
+      <div>
+      <ul className="keyboard">{keyComponents}
+      </ul>
+      <Recorder/>
+      </div>
     );
   }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.querySelector('#content');
-  ReactDOM.render(<Organ />, root);
+  ReactDOM.render(<Organ/>, root);
 });
